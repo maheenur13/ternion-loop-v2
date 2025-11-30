@@ -1,8 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* Additional styles */
-@import './additional-styles/utility-patterns.css' layer(components);
-@import './additional-styles/theme.css';
+@import "./additional-styles/utility-patterns.css" layer(components);
+@import "./additional-styles/theme.css";
 
 @plugin "@tailwindcss/forms" {
   strategy: base;
@@ -11,6 +11,19 @@
 @theme {
   --font-inter: var(--font-inter), sans-serif;
   --font-nacelle: var(--font-nacelle), sans-serif;
+
+  /* Ternion Loop Brand Colors - Blue #027efc */
+  --color-brand-50: #e6f2ff;
+  --color-brand-100: #cce5ff;
+  --color-brand-200: #99ccff;
+  --color-brand-300: #66b2ff;
+  --color-brand-400: #3399ff;
+  --color-brand-500: #027efc;
+  --color-brand-600: #0265ca;
+  --color-brand-700: #014c97;
+  --color-brand-800: #013265;
+  --color-brand-900: #001932;
+  --color-brand-950: #000c19;
 
   --text-xs: 0.8125rem;
   --text-xs--line-height: 1.5384;

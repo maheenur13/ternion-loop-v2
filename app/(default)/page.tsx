@@ -1,12 +1,14 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "Ternion Loop - Building Innovative Solutions",
+  description: "Product-based company with innovative solutions including Sports Loop, MetroG, and Loop Education Network",
 };
 
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-home";
 import Workflows from "@/components/workflows";
+import Products from "@/components/products";
 import Features from "@/components/features";
+import Team from "@/components/team";
 import Testimonials from "@/components/testimonials";
 import Cta from "@/components/cta";
 
@@ -16,8 +18,9 @@ export default function Home() {
       <PageIllustration />
       <Hero />
       <Workflows />
+      <Products />
       <Features />
-      <Testimonials />
+      <Team />
       <Cta />
     </>
   );
