@@ -1,19 +1,32 @@
+import Image from "next/image";
+import TeamImage from "@/public/images/jahidun-business-photo.jpeg";
+import ShuvroImage from "@/public/images/shuvro-business-photo.png";
+import YeasinImage from "@/public/images/yeasin-business-photo.png";
+
 export default function Team() {
     const founders = [
         {
             name: "Jahidun Nur Mahee",
             role: "CEO & Founder",
+            designation: "Technical Lead Backend & Frontend Engineer",
             initials: "JM",
+            image: TeamImage,
+            objectPosition: "50% 40%",
         },
         {
             name: "Shuvro Sarkar",
             role: "Co-Founder",
+            designation: "Co-Lead Frontend Engineer & Lead UI/UX",
             initials: "SS",
+            image: ShuvroImage,
         },
         {
             name: "Yeasin Khalili",
             role: "Co-Founder",
+            designation: "Business & Marketing Lead",
             initials: "YK",
+            image: YeasinImage,
+            objectPosition: "50% 25%",
         },
     ];
 
@@ -57,10 +70,25 @@ export default function Team() {
                                 >
                                     <div className="flex flex-col items-center text-center">
                                         {/* Avatar */}
-                                        <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#027efc] to-[#0265ca]">
-                                            <span className="text-2xl font-bold text-white">
-                                                {founder.initials}
-                                            </span>
+                                        <div className="mb-4 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#027efc] to-[#0265ca]">
+                                            {founder.image ? (
+                                                <Image
+                                                    src={founder.image}
+                                                    alt={founder.name}
+                                                    width={128}
+                                                    height={128}
+                                                    className="h-full w-full object-cover"
+                                                    style={{
+                                                        objectPosition:
+                                                            founder.objectPosition ||
+                                                            "center",
+                                                    }}
+                                                />
+                                            ) : (
+                                                <span className="text-2xl font-bold text-white">
+                                                    {founder.initials}
+                                                </span>
+                                            )}
                                         </div>
                                         {/* Name */}
                                         <h4 className="mb-1 font-nacelle text-lg font-semibold text-gray-200">
@@ -68,6 +96,12 @@ export default function Team() {
                                         </h4>
                                         {/* Role */}
                                         <p className="text-sm text-blue-200/65">{founder.role}</p>
+                                        {/* Designation */}
+                                        {founder.designation && (
+                                            <p className="text-xs text-gray-400">
+                                                {founder.designation}
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
                             ))}
@@ -87,7 +121,7 @@ export default function Team() {
                                 >
                                     <div className="flex flex-col items-center text-center">
                                         {/* Avatar */}
-                                        <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-linear-to-br from-gray-700 to-gray-800">
+                                        <div className="mb-4 flex h-32 w-32 items-center justify-center rounded-full bg-linear-to-br from-gray-700 to-gray-800">
                                             <span className="text-2xl font-bold text-gray-300">
                                                 {member.initials}
                                             </span>

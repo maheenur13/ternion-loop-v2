@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Ternion Loop - Building Innovative Solutions",
-  description: "Product-based company with innovative solutions including Sports Loop, MetroG, and Loop Education Network",
+  description: "Passionate innovators dedicated to building solutions that make a difference.",
 };
 
 import PageIllustration from "@/components/page-illustration";

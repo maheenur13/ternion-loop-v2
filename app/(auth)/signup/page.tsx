@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Sign Up - Open PRO",
-  description: "Page description",
+  title: "Sign Up - Ternion Loop",
+  description: "Create your Ternion Loop account.",
 };
 
 import Link from "next/link";

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Reset Password - Open PRO",
-  description: "Page description",
+  title: "Reset Password - Ternion Loop",
+  description: "Reset your Ternion Loop account password.",
 };
 
 import Link from "next/link";

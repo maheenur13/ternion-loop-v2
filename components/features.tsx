@@ -2,6 +2,7 @@ import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import FeaturesImage from "@/public/images/features.png";
+import TechCarousel from "@/components/tech-carousel";
 
 export default function Features() {
   return (
@@ -46,6 +47,9 @@ export default function Features() {
               We leverage cutting-edge technologies to build robust, scalable, and innovative solutions across web and mobile platforms.
             </p>
           </div>
+
+          {/* Technology Carousel */}
+          <TechCarousel />
 
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
